@@ -1,7 +1,7 @@
 import mysql from "mysql2/promise";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
-dotenv.config();
+// dotenv.config();
 
 if (!process.env.DB_CA_BASE64) {
 	throw new Error("DB_CA_BASE64 environment variable is missing!");

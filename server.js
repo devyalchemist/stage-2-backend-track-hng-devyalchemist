@@ -9,7 +9,7 @@ import path from "path";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // 1. IMPORT THE ROUTES
 // Load .env variables
-dotenv.config();
+// dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
