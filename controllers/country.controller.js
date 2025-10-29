@@ -416,7 +416,9 @@ export const deleteCountryByName = async (req, res) => {
 		res.status(500).json({ error: "Internal server error" });
 	}
 };
-
+export const loadRoot = async (req, res) => {
+	res.json({ message: "Server is running. DB connection should be working." });
+};
 export const getApiStatus = async (req, res) => {
 	try {
 		const [rows] = await pool.query(

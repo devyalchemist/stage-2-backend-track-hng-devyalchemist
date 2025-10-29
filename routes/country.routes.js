@@ -6,6 +6,7 @@ import {
 	deleteCountryByName,
 	getApiStatus,
 	getSummaryImage,
+	loadRoot,
 } from "../controllers/country.controller.js";
 
 const router = express.Router();
@@ -15,6 +16,7 @@ router.route("/countries/image").get(getSummaryImage);
 
 router.post("/countries/refresh", refreshCountries);
 router.get("/countries/", getAllCountries);
+router.get("/", loadRoot);
 router
 	.route("/countries/:name")
 	.get(getCountryByName)
