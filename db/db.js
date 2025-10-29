@@ -13,7 +13,7 @@ const pool = mysql.createPool({
 	password: process.env.DB_PASS,
 	database: process.env.DB_NAME,
 	ssl: {
-		ca: process.env.DB_CA, // path to your certificate
+		ca: Buffer.from(process.env.DB_CA_BASE64, "base64").toString(),
 		rejectUnauthorized: true,
 	},
 	waitForConnections: true,
