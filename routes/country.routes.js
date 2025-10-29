@@ -12,6 +12,7 @@ const router = express.Router();
 
 // Define all the endpoints required by the task
 router.route("/countries/image").get(getSummaryImage);
+
 router.post("/countries/refresh", refreshCountries);
 router.get("/countries/", getAllCountries);
 router
