@@ -21,6 +21,6 @@ router
 	.route("/countries/:name")
 	.get(getCountryByName)
 	.delete(deleteCountryByName);
-router.route("status").get(getApiStatus);
+router.route("/status").get(getApiStatus);
 
 export default router;
