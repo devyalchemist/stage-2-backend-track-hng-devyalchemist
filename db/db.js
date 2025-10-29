@@ -2,12 +2,11 @@ import mysql from "mysql2/promise";
 // import dotenv from "dotenv";
 
 // dotenv.config();
-
-if (!process.env.DB_CA_BASE64) {
-	throw new Error("DB_CA_BASE64 environment variable is missing!");
-}
 if (!process.env.DB_HOST) {
 	throw new Error("DB_HOST environment variable is missing!");
+}
+if (!process.env.DB_CA_BASE64) {
+	throw new Error("DB_CA_BASE64 environment variable is missing!");
 }
 
 const pool = mysql.createPool({
