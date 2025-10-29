@@ -6,6 +6,9 @@ dotenv.config();
 if (!process.env.DB_CA_BASE64) {
 	throw new Error("DB_CA_BASE64 environment variable is missing!");
 }
+if (!process.env.DB_HOST) {
+	throw new Error("DB_HOST environment variable is missing!");
+}
 
 const pool = mysql.createPool({
 	host: process.env.DB_HOST,
