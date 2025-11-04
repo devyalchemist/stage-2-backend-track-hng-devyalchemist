@@ -7,7 +7,11 @@ import initDb from "./models/country.model.js";
 import countryRoutes from "./routes/country.routes.js";
 import { fileURLToPath } from "url";
 import path from "path";
-
+console.log(
+	"The variable username: ",
+	process.env.DB_CA_BASE64,
+	typeof process.env.DB_CA_BASE64
+);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // 1. IMPORT THE ROUTES
 // Load .env variables

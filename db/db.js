@@ -1,5 +1,9 @@
 import mysql from "mysql2/promise";
-
+console.log(
+	"The variable username from db is: ",
+	process.env.DB_CA_BASE64,
+	typeof process.env.DB_CA_BASE64
+);
 const pool = mysql.createPool({
 	host: process.env.DB_HOST,
 	user: process.env.DB_USER,
