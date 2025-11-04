@@ -1,11 +1,13 @@
-import express from "express";
 import dotenv from "dotenv";
+dotenv.config();
+import express from "express";
 import pool from "./db/db.js";
 import initStatusTable from "./models/status.model.js";
 import initDb from "./models/country.model.js";
 import countryRoutes from "./routes/country.routes.js";
 import { fileURLToPath } from "url";
 import path from "path";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // 1. IMPORT THE ROUTES
 // Load .env variables
