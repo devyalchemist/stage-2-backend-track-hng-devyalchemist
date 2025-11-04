@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
-dotenv.config(); // must come before using process.env
-
+if (process.env.RAILWAY_ENVIRONMENT === undefined) {
+	dotenv.config();
+}
 import express from "express";
 import pool from "./db/db.js";
 import initStatusTable from "./models/status.model.js";

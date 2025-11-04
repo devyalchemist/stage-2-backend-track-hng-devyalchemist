@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
-dotenv.config();
-
+if (process.env.RAILWAY_ENVIRONMENT === undefined) {
+	dotenv.config();
+}
 import mysql from "mysql2/promise";
 console.log(
 	"The variable username from db is: ",
