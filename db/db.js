@@ -1,8 +1,11 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import mysql from "mysql2/promise";
 console.log(
 	"The variable username from db is: ",
-	process.env.DB_CA_BASE64,
-	typeof process.env.DB_CA_BASE64
+	process.env.DB_USER,
+	typeof process.env.DB_USER
 );
 const pool = mysql.createPool({
 	host: process.env.DB_HOST,

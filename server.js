@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config(); // must come before using process.env
+
 import express from "express";
 import pool from "./db/db.js";
 import initStatusTable from "./models/status.model.js";
@@ -7,11 +8,7 @@ import initDb from "./models/country.model.js";
 import countryRoutes from "./routes/country.routes.js";
 import { fileURLToPath } from "url";
 import path from "path";
-console.log(
-	"The variable username: ",
-	process.env.DB_CA_BASE64,
-	typeof process.env.DB_CA_BASE64
-);
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // 1. IMPORT THE ROUTES
 // Load .env variables
